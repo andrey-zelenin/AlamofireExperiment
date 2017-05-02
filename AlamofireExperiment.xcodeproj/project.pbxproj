@@ -81,9 +81,9 @@
 		93EF0CA21BF41DA20051B5B1 /* AlamofireExperiment */ = {
 			isa = PBXGroup;
 			children = (
-				343B40E21E8511B70035D487 /* ImaggaRouter.swift */,
 				93EF0CA31BF41DA20051B5B1 /* AppDelegate.swift */,
 				93EF0CAA1BF41DA20051B5B1 /* Assets.xcassets */,
+				343B40E21E8511B70035D487 /* ImaggaRouter.swift */,
 				93EF0CAF1BF41DA20051B5B1 /* Info.plist */,
 				93EF0CAC1BF41DA20051B5B1 /* LaunchScreen.storyboard */,
 				93EF0CA71BF41DA20051B5B1 /* Main.storyboard */,
