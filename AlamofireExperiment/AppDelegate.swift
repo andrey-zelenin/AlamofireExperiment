@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 Andrey Zelenin
+ * Copyright (c) 2017 Andrey Zelenin
  *
  * Original idea took from https://www.raywenderlich.com
  *
