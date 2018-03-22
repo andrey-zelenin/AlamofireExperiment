@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		343B40E31E8511B70035D487 /* ImaggaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B40E21E8511B70035D487 /* ImaggaRouter.swift */; };
+		34CB01912063F37B00E4A033 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB01902063F37B00E4A033 /* Reachability.swift */; };
 		932ED1F71BF9390D0072C1C4 /* PhotoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */; };
 		932ED1F91BF944590072C1C4 /* TagsColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */; };
 		932ED1FB1BF9459E0072C1C4 /* TagsColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1FA1BF9459E0072C1C4 /* TagsColorsTableViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		2729860E442D4314FC763814 /* Pods-AlamofireExperiment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExperiment.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireExperiment/Pods-AlamofireExperiment.release.xcconfig"; sourceTree = "<group>"; };
 		343B40E21E8511B70035D487 /* ImaggaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImaggaRouter.swift; sourceTree = "<group>"; };
+		34CB01902063F37B00E4A033 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		78636D4E21825695C0DBB569 /* Pods_AlamofireExperiment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireExperiment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoColor.swift; sourceTree = "<group>"; };
 		932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorsViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				343B40E21E8511B70035D487 /* ImaggaRouter.swift */,
 				932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */,
+				34CB01902063F37B00E4A033 /* Reachability.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				9569363E1E0B06AC00B49A5A /* TagsColorTableData.swift in Sources */,
 				343B40E31E8511B70035D487 /* ImaggaRouter.swift in Sources */,
 				93EF0CA61BF41DA20051B5B1 /* ViewController.swift in Sources */,
+				34CB01912063F37B00E4A033 /* Reachability.swift in Sources */,
 				93EF0CA41BF41DA20051B5B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

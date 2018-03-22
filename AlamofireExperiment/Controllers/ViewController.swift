@@ -10,11 +10,12 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    @IBOutlet var takePictureButton: UIButton!
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var progressView: UIProgressView!
-    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
-
+    @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var networkStatus: UILabel!
+    
     @IBAction func takePicture(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -33,13 +34,34 @@ class ViewController: UIViewController {
     // Properties
     fileprivate var tags: [String]?
     fileprivate var colors: [PhotoColor]?
+    fileprivate var reachabilityManager: Reachability?
 
+    deinit {
+        stopNotifier()
+    }
+  
     // View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+        stopNotifier()
+      
         guard !UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
-
+      
+        reachabilityManager = Reachability()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reachabilityChanged(_:)),
+            name: .reachabilityChanged,
+            object: reachabilityManager
+        )
+      
+        do {
+            try reachabilityManager?.startNotifier()
+        } catch {
+            print("Could not start reachability notifier")
+        }
+      
         takePictureButton.setTitle("Select Photo", for: .normal)
     }
 
@@ -54,6 +76,35 @@ class ViewController: UIViewController {
             let controller = segue.destination as! TagsColorsViewController
             controller.tags = tags
             controller.colors = colors
+        }
+    }
+  
+    func startNotifier() {
+        do {
+            try reachabilityManager?.startNotifier()
+        } catch {
+            networkStatus.backgroundColor = .red
+            networkStatus.text = "Unable to start\nnotifier"
+          
+            return
+        }
+    }
+  
+    func stopNotifier() {
+        reachabilityManager?.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: nil)
+        reachabilityManager = nil
+    }
+  
+    @objc func reachabilityChanged(_ note: Notification) {
+        let reachability = note.object as! Reachability
+      
+        if reachability.connection != .none {
+            networkStatus.text = "Connected"
+            networkStatus.backgroundColor = .green
+        } else {
+            networkStatus.text = "Not connected"
+            networkStatus.backgroundColor = .red
         }
     }
 }
