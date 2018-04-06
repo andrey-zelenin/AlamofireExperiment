@@ -13,11 +13,11 @@ class TagsColorsViewController: UIViewController {
     var tableViewController: TagsColorsTableViewController?
 
     @IBOutlet var segmentedControl: UISegmentedControl!
-  
+
     @IBAction func tagsColorsSegmentedControlChanged(_ sender: UISegmentedControl) {
         setupTableData()
     }
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,15 +42,20 @@ class TagsColorsViewController: UIViewController {
         } else {
             if let colors = colors {
                 tableViewController?.data = colors.map({ (photoColor: PhotoColor) -> TagsColorTableData in
-                    let uicolor = UIColor(red: CGFloat(photoColor.red!) / 255, green: CGFloat(photoColor.green!) / 255, blue: CGFloat(photoColor.blue!) / 255, alpha: 1.0)
-              
+                    let uicolor = UIColor(
+                        red: CGFloat(photoColor.red!) / 255,
+                        green: CGFloat(photoColor.green!) / 255,
+                        blue: CGFloat(photoColor.blue!) / 255,
+                        alpha: 1.0
+                    )
+
                     return TagsColorTableData(label: photoColor.colorName!, color: uicolor)
                 })
             } else {
                 tableViewController?.data = [TagsColorTableData(label: "No colors were fetched.", color: nil)]
             }
         }
-      
+
         tableViewController?.tableView.reloadData()
     }
 }

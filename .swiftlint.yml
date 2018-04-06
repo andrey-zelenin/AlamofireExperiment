@@ -1,0 +1,10 @@
+included:
+  - AlamofireExperiment
+disabled_rules:
+  - function_parameter_count
+  - nesting
+  - trailing_whitespace
+  - variable_name
+line_length: 130
+reporter: "xcode"
+warning_threshold: 30
