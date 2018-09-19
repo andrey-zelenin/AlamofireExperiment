@@ -116,8 +116,11 @@ class ViewController: UIViewController {
 
 // UIImagePickerControllerDelegate
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        guard let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else {
             print("Info did not have the required UIImage for the Original Image")
             dismiss(animated: true)
 
@@ -162,7 +165,7 @@ extension ViewController {
         progressCompletion: @escaping (_ percent: Float) -> Void,
         completion: @escaping (_ tags: [String], _ colors: [PhotoColor]) -> Void
     ) {
-            guard let imageData = UIImageJPEGRepresentation(image, 0.5) else {
+            guard let imageData = image.jpegData(compressionQuality: 0.5) else {
                 print("Could not get JPEG representation of UIImage")
 
                 return
@@ -272,4 +275,14 @@ extension ViewController {
             completion(photoColors)
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }
