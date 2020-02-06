@@ -20,16 +20,13 @@
 		93EF0CAB1BF41DA20051B5B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EF0CAA1BF41DA20051B5B1 /* Assets.xcassets */; };
 		93EF0CAE1BF41DA20051B5B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EF0CAC1BF41DA20051B5B1 /* LaunchScreen.storyboard */; };
 		9569363E1E0B06AC00B49A5A /* TagsColorTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569363D1E0B06AC00B49A5A /* TagsColorTableData.swift */; };
-		E5F4063B5A9BA504C0E9BB6F /* Pods_AlamofireExperiment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78636D4E21825695C0DBB569 /* Pods_AlamofireExperiment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2729860E442D4314FC763814 /* Pods-AlamofireExperiment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExperiment.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireExperiment/Pods-AlamofireExperiment.release.xcconfig"; sourceTree = "<group>"; };
 		343B40E21E8511B70035D487 /* ImaggaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImaggaRouter.swift; sourceTree = "<group>"; };
 		34CB01902063F37B00E4A033 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		34F9372720775A08005860A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		34F9372920775A4B005860A2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		78636D4E21825695C0DBB569 /* Pods_AlamofireExperiment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireExperiment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoColor.swift; sourceTree = "<group>"; };
 		932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorsViewController.swift; sourceTree = "<group>"; };
 		932ED1FA1BF9459E0072C1C4 /* TagsColorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorsTableViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +38,6 @@
 		93EF0CAD1BF41DA20051B5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93EF0CAF1BF41DA20051B5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9569363D1E0B06AC00B49A5A /* TagsColorTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsColorTableData.swift; sourceTree = "<group>"; };
-		AD35B8230872F0180D86FB54 /* Pods-AlamofireExperiment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExperiment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireExperiment/Pods-AlamofireExperiment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F4063B5A9BA504C0E9BB6F /* Pods_AlamofireExperiment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,15 +90,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		48818A756A3CD2EEA9D72B58 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AD35B8230872F0180D86FB54 /* Pods-AlamofireExperiment.debug.xcconfig */,
-				2729860E442D4314FC763814 /* Pods-AlamofireExperiment.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		93EF0C971BF41DA20051B5B1 = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +97,6 @@
 				34F9372720775A08005860A2 /* README.md */,
 				93EF0CA21BF41DA20051B5B1 /* AlamofireExperiment */,
 				93EF0CA11BF41DA20051B5B1 /* Products */,
-				48818A756A3CD2EEA9D72B58 /* Pods */,
-				9B075E878489D218E58A8DBB /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,14 +122,6 @@
 			path = AlamofireExperiment;
 			sourceTree = "<group>";
 		};
-		9B075E878489D218E58A8DBB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				78636D4E21825695C0DBB569 /* Pods_AlamofireExperiment.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,11 +129,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EF0CB21BF41DA20051B5B1 /* Build configuration list for PBXNativeTarget "AlamofireExperiment" */;
 			buildPhases = (
-				FA9986B9A036747839A23538 /* [CP] Check Pods Manifest.lock */,
 				93EF0C9C1BF41DA20051B5B1 /* Sources */,
 				93EF0C9D1BF41DA20051B5B1 /* Frameworks */,
 				93EF0C9E1BF41DA20051B5B1 /* Resources */,
-				DCC1DB7144F16D40B7BBBCBF /* [CP] Embed Pods Frameworks */,
 				34F9372620775712005860A2 /* ShellScript */,
 			);
 			buildRules = (
@@ -232,42 +206,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\nfi\n";
-		};
-		DCC1DB7144F16D40B7BBBCBF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlamofireExperiment/Pods-AlamofireExperiment-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlamofireExperiment/Pods-AlamofireExperiment-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA9986B9A036747839A23538 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlamofireExperiment-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -417,7 +355,6 @@
 		};
 		93EF0CB31BF41DA20051B5B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD35B8230872F0180D86FB54 /* Pods-AlamofireExperiment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -433,7 +370,6 @@
 		};
 		93EF0CB41BF41DA20051B5B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2729860E442D4314FC763814 /* Pods-AlamofireExperiment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
