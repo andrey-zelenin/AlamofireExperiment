@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		343B40E31E8511B70035D487 /* ImaggaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B40E21E8511B70035D487 /* ImaggaRouter.swift */; };
 		34CB01912063F37B00E4A033 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CB01902063F37B00E4A033 /* Reachability.swift */; };
+		34E12DBC23EC48C20081F393 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 34E12DBB23EC48C20081F393 /* Alamofire */; };
 		34F9372820775A09005860A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 34F9372720775A08005860A2 /* README.md */; };
 		34F9372A20775A4B005860A2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 34F9372920775A4B005860A2 /* .swiftlint.yml */; };
 		932ED1F71BF9390D0072C1C4 /* PhotoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E12DBC23EC48C20081F393 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +141,9 @@
 			dependencies = (
 			);
 			name = AlamofireExperiment;
+			packageProductDependencies = (
+				34E12DBB23EC48C20081F393 /* Alamofire */,
+			);
 			productName = PhotoTagger;
 			productReference = 93EF0CA01BF41DA20051B5B1 /* AlamofireExperiment.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 93EF0C971BF41DA20051B5B1;
+			packageReferences = (
+				34E12DBA23EC48C20081F393 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 93EF0CA11BF41DA20051B5B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,7 +355,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -361,7 +370,10 @@
 				DEVELOPMENT_TEAM = VCJG4B45FJ;
 				INFOPLIST_FILE = "$(SRCROOT)/AlamofireExperiment/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unvsoft.AlamofireExperiment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -376,7 +388,10 @@
 				DEVELOPMENT_TEAM = VCJG4B45FJ;
 				INFOPLIST_FILE = "$(SRCROOT)/AlamofireExperiment/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unvsoft.AlamofireExperiment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -405,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34E12DBA23EC48C20081F393 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34E12DBB23EC48C20081F393 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34E12DBA23EC48C20081F393 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93EF0C981BF41DA20051B5B1 /* Project object */;
 }

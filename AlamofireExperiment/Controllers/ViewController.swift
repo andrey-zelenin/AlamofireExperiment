@@ -120,7 +120,9 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     // Local variable inserted by Swift 4.2 migrator.
     let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
 
-    guard let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else {
+    guard
+      let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage
+    else {
       print("Info did not have the required UIImage for the Original Image")
       dismiss(animated: true)
 
