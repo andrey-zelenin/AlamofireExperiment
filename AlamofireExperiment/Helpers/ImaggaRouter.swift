@@ -1,24 +1,17 @@
-/*
- * Copyright (c) 2017 Andrey Zelenin
- *
- * Original idea took from https://www.raywenderlich.com
- *
- */
-
 import Foundation
 import Alamofire
 
 public enum ImaggaRouter: URLRequestConvertible {
-  static let baseURLPath = "http://api.imagga.com/v1"
-  static let authenticationToken = "Basic xxx" // set your credentials
+  static let baseURLPath = "https://api.imagga.com/v2"
+  static let authenticationToken = "Basic YWNjX2FiM2RlZWQwZGZjYWUyMTpmOGZlZjBlZTNjMmE4YWE2M2FkNjI0ZmJlNTY4ZmZlMA==" // set your credentials
 
-  case content
+  case upload
   case tags(String)
   case colors(String)
 
   var method: HTTPMethod {
     switch self {
-    case .content:
+    case .upload:
       return .post
     case .tags, .colors:
       return .get
@@ -27,10 +20,10 @@ public enum ImaggaRouter: URLRequestConvertible {
 
   var path: String {
     switch self {
-    case .content:
-      return "/content" // for upload image
+    case .upload:
+      return "/uploads" // for upload image
     case .tags:
-      return "/tagging" // for getting tags
+      return "/tags" // for getting tags
     case .colors:
       return "/colors"  // for getting colors
     }
@@ -40,9 +33,9 @@ public enum ImaggaRouter: URLRequestConvertible {
     let parameters: [String: Any] = {
       switch self {
       case .tags(let contentID):
-        return ["content": contentID]
+        return ["image_upload_id": contentID]
       case .colors(let contentID):
-        return ["content": contentID, "extract_object_colors": 0]
+        return ["image_upload_id": contentID, "extract_object_colors": 0]
       default:
         return [:]
       }
