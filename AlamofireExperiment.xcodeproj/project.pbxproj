@@ -68,7 +68,6 @@
 			children = (
 				932ED1FA1BF9459E0072C1C4 /* TagsColorsTableViewController.swift */,
 				932ED1F81BF944590072C1C4 /* TagsColorsViewController.swift */,
-				9569363D1E0B06AC00B49A5A /* TagsColorTableData.swift */,
 				93EF0CA51BF41DA20051B5B1 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -78,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				343B40E21E8511B70035D487 /* ImaggaRouter.swift */,
-				932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */,
 				34CB01902063F37B00E4A033 /* Reachability.swift */,
 			);
 			path = Helpers;
@@ -91,6 +89,15 @@
 				93EF0CA71BF41DA20051B5B1 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		34E38B982532E60B005A113B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				932ED1F61BF9390D0072C1C4 /* PhotoColor.swift */,
+				9569363D1E0B06AC00B49A5A /* TagsColorTableData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		93EF0C971BF41DA20051B5B1 = {
@@ -120,6 +127,7 @@
 				93EF0CA31BF41DA20051B5B1 /* AppDelegate.swift */,
 				348782BF1FD81FC500E35852 /* Controllers */,
 				348782C01FD81FE000E35852 /* Helpers */,
+				34E38B982532E60B005A113B /* Models */,
 				348782BE1FD81FB200E35852 /* Resources */,
 				348782C11FD8200400E35852 /* Views */,
 			);
